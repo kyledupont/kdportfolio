@@ -99,11 +99,9 @@
 										</article>
 										<article>
 											<!-- <a href="#" class="image"><img src="/static/images/pic05.jpg" alt="" /></a> -->
-											<div class="video-container">
-												<video id="kyledupont.io_Animation_Video" width="500" height="300" playsinline autoplay muted loop>
+											<video id="kyledupont.io_Animation_Video" width="500" height="300" playsinline autoplay muted loop>
 									  			<source src="/static/videos/kyledupont_logo_720p.mp4" type="video/mp4">
-												</video>
-											</div>
+											</video>
 											<h3 class="major">Animation</h3>
 											<p>HD animations using Adobe After Effects and Media Encoder.</p>
 											<a href="http://django-eb-env.gaa3pnpxby.us-east-1.elasticbeanstalk.com/static/videos/kyledupont_logo_720p.mp4" target="_blank" class="special">See full size animation</a>
@@ -116,6 +114,13 @@
 										</article>
 										<article>
 											<a href="#" class="image"><img src="/static/images/pi1.jpg" alt="" /></a>
+											<img class="mySlides" src="/static/images/pic01.jpg" style="width:100%">
+										  <img class="mySlides" src="/static/images/pic02.jpg" style="width:100%">
+										  <img class="mySlides" src="/static/images/pic03.jpg" style="width:100%">
+										  <img class="mySlides" src="/static/images/pic04.jpg" style="width:100%">
+
+										  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+										  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 											<h3 class="major">Rasberry Pi Mod</h3>
 											<p>Modded Rasberry Pi running the Linux based OS: Recalbox. A modern take on all the gaming classics. Includes over 5,500 games from over 25 retro gaming systems. Complete with a mini NES case mod and retro usb controller.</p>
 											<a href="#" class="special">Learn more</a>
@@ -183,6 +188,24 @@
 			<script>
 				document.getElementById('kyledupont.io_Animation_Video').play();
 			</script>
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
 
+				function plusDivs(n) {
+  				showDivs(slideIndex += n);
+				}
+
+				function showDivs(n) {
+  				var i;
+  				var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+			     x[i].style.display = "none";
+			  	}
+			  x[slideIndex-1].style.display = "block";
+				}
+</script>
 	</body>
 </html>
