@@ -29,7 +29,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'django-eb-env.gaa3pnpxby.us-east-1.elasticbeanstalk.com',
     'localhost',
-    '127.0.0.1',
+    '127.0.0.1'
+    'kyledupont.io',
 ]
 
 
