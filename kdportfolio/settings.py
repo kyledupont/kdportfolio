@@ -69,7 +69,6 @@ STATICFILES_DIRS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': ['C:/Users/Dup0n7/OneDrive/Projects/Portfolio/kdportfolio/html5'],
         'DIRS': [os.path.join(BASE_DIR, 'html5')],
         'APP_DIRS': True,
         'OPTIONS': {
