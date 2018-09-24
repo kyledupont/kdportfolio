@@ -12,10 +12,11 @@ def send_email(name, fromemail, content):
     content = Content("text/plain", content)
     mail = Mail(from_email, subject, to_email, content)
     response = sg.client.mail.send.post(request_body=mail.get())
+    send_email.code = response.status_code
     print(response.status_code)
 
 
-send_email("billy", "bily128282@gmail.com", "here is my message")
+#send_email("billy", "bily128282@gmail.com", "here is my message")
 
 # print(response.body)
 # print(response.headers)
