@@ -1,5 +1,32 @@
+from django.http import HttpResponse
 from django.shortcuts import render
+from .forms import ContactForm
+import sendgrid
+import os
+from sendgrid.helpers.mail import *
+from .keys import SENDGRID_API_KEY
+from .sendemail import send_email
 
+
+# def home(request):
+#     return render(request, "index.html")
 
 def home(request):
-    return render(request, "index.html")
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            send_email(name, email, message)
+            code = send_email.code
+            args = {'form': form, 'name': name, 'email': email, 'message': message, 'code': code}
+            return render(request, 'home.html', args)
+            # send_email()
+
+            # pass  # does nothing, just trigger the validation
+    else:
+        form = ContactForm()
+
+    return render(request, 'index.html', {'form': form})
