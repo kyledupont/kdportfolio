@@ -22,7 +22,7 @@ def home(request):
             send_email(name, email, message)
             code = send_email.code
             args = {'form': form, 'name': name, 'email': email, 'message': message, 'code': code}
-            return render(request, 'home.html', args)
+            return render(request, 'index.html', args)
             # send_email()
 
             # pass  # does nothing, just trigger the validation
