@@ -1,11 +1,11 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import render
-from forms import ContactForm
-import sendgrid
-import os
-from sendgrid.helpers.mail import *
-from keys import SENDGRID_API_KEY
-from sendemail import send_email
+# from forms import ContactForm
+# import sendgrid
+# import os
+# from sendgrid.helpers.mail import *
+# from keys import SENDGRID_API_KEY
+# from sendemail import send_email
 
 
 def home(request):
