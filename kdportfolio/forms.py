@@ -7,7 +7,7 @@ class ContactForm(forms.Form):
     message = forms.CharField(
         max_length=2000,
         widget=forms.Textarea(),
-        help_text='Write here your message!'
+        # help_text='Write here your message!'
     )
 
     def clean(self):

@@ -146,7 +146,9 @@
 								{% csrf_token %}
 
 								<div class="fields">
-									{{ form.as_p }}
+									<div class="field">
+										{{ form.as_p }}
+									</div>
 									<!-- <div class="field">
 										<label for="name">Name</label>
 										<input type="text" name="name" id="name" />
