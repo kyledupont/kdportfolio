@@ -23,8 +23,8 @@ def home(request):
             code = send_email.code
             args = {'form': form, 'name': name, 'email': email, 'message': message, 'code': code}
             return render(request, 'index.html', args)
+            form = ContactForm()
             # send_email()
-
             # pass  # does nothing, just trigger the validation
     else:
         form = ContactForm()
