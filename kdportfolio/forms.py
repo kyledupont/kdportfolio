@@ -6,8 +6,7 @@ class ContactForm(forms.Form):
     email = forms.EmailField(max_length=254, required=True)
     message = forms.CharField(
         max_length=2000,
-        rows="4",
-        widget=forms.Textarea(),
+        widget=forms.Textarea(attrs={'rows': 4}),
         # help_text='Write here your message!'
     )
 
