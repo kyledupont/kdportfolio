@@ -23,7 +23,7 @@ def home(request):
             send_email(name, email, message)
             code = send_email.code
             messages.add_message(request, messages.SUCCESS, 'Form submission successful!')
-            form.save()
+            # form.save()
             form = ContactForm()
             args = {'form': form, 'name': name, 'email': email, 'message': message, 'code': code}
             return render(request, 'index.html', args)
