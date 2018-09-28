@@ -21,8 +21,9 @@ def home(request):
             message = form.cleaned_data['message']
             send_email(name, email, message)
             code = send_email.code
-            args = {'form': form, 'name': name, 'email': email, 'message': message, 'code': code}
+            messages.add_message(request, messages.SUCCESS, 'Email has been sent.')
             form = ContactForm()
+            args = {'form': form, 'name': name, 'email': email, 'message': message, 'code': code}
             return render(request, 'index.html', args)
 
             # send_email()

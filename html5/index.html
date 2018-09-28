@@ -55,7 +55,7 @@
 									<a href="https://s3.amazonaws.com/pubfiles-kdupont.io/KyleDupont-Resume.pdf" target="_blank" class="image"><img src= "/static/images/kyle2.jpg" alt="" /></a>
 									<div class="content">
 										<h2 class="major">About Me</h2>
-										<p>I have been working with technology in a full time professional environment since 2008, and in a casual/social environment my entire life. I constantly seek the gratification that comes with learning how something works or why it is not working. The fast pace and ever changing nature of technology is something I truly enjoy. Combining the knowledge i've absorbed from a corporate environement with that from my personal projects allows me to have a keen eye for automating processes and solving meaningful problems in a simplistic and lightweight approach.</p>
+										<p>I have been working with technology in a full time professional environment since 2008, and in a casual/social environment my entire life. I constantly seek the gratification that comes with learning how something works or why it is not working. The fast pace and ever changing nature of technology is something I truly enjoy. Combining the knowledge I've absorbed from a corporate environement with that from my personal projects allows me to have a keen eye for automating processes and solving meaningful problems in a simplistic and lightweight approach.</p>
 										<a href="https://s3.amazonaws.com/pubfiles-kdupont.io/KyleDupont-Resume.pdf" target="_blank" class="special">View Resume</a>
 									</div>
 								</div>
@@ -144,7 +144,13 @@
 							<p>Feel free to reach out by sending an Email or submitting this form.</p>
 							<form method="post">
 								{% csrf_token %}
-
+								{% if messages %}
+								<ul class="messages">
+								    {% for message in messages %}
+								    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+								    {% endfor %}
+								</ul>
+								{% endif %}
 								<div class="fields">
 									<div class="field">
 										{{ form.as_p }}
