@@ -217,7 +217,6 @@
 			<script>
 			{% if messages %}
 					{% for message in messages %}
-						{% if message.tags %} class="{{ message.tags }}"{% endif %}>
 						alert('{{ message }}')
 					{% endfor %}
 			{% endif %}
