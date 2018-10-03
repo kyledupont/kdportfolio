@@ -1,8 +1,8 @@
 var canvas = document.querySelector('canvas');
 
 
-canvas.width = window.innerWidth - 6;
-canvas.height = window.innerHeight - 6;
+// canvas.width = window.innerWidth - 6;
+// canvas.height = window.innerHeight - 6;
 
 var c = canvas.getContext('2d');
 console.log(canvas);
@@ -58,8 +58,8 @@ window.addEventListener('mousemove', function(event){
 })
 
 window.addEventListener('resize', function(){
-  canvas.width = window.innerWidth - 6;
-  canvas.height = window.innerHeight - 6;
+  // canvas.width = window.innerWidth - 6;
+  // canvas.height = window.innerHeight - 6;
 
   init();
 });
