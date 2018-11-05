@@ -96,7 +96,7 @@ function Circle(x, y, dx, dy, radius) {
     // interactivity
     if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
       if (this.radius < maxRadius) {
-        this.radius += 1;
+        this.radius += 3;
       }
     } else if (this.radius > this.minRadius){
       this.radius -= 1;
@@ -113,8 +113,8 @@ function init() {
 
   circleArray = [];
 
-  for (var i = 0; i <1000; i++) {
-    var radius = Math.random() * 15 + 1;
+  for (var i = 0; i <1200; i++) {
+    var radius = Math.random() * 10 + 1;
     var x = Math.random() * (innerWidth - 6 - radius * 2) + radius;
     var y = Math.random() * (innerHeight - 6 - radius *2) + radius;
     var dx = Math.random() - 0.5;
