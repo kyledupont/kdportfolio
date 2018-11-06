@@ -3021,10 +3021,12 @@ input, select, textarea {
 				width: calc(100% + 3.5em);
 			}
 
-				.features article .image img {
-					border-radius: 5px 5px 0 0;
-					width: 100%;
-				}
+			.features article .image img {
+				border-radius: 5px 5px 0 0;
+				width: 100%;
+				height: 18em;
+				margin-bottom: 1.75em;
+			}
 
 		@media screen and (max-width: 980px) {
 
