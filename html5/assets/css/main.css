@@ -3010,12 +3010,13 @@ input, select, textarea {
 				margin-right: 0;
 			}
 
-			.features article .image {
+			.features article .image, .mySlides, .image video {
 				border-radius: 5px 5px 0 0;
 				display: block;
 				margin-bottom: 1.75em;
 				margin-left: -1.75em;
 				margin-top: -1.75em;
+				height: 18em;
 				position: relative;
 				width: calc(100% + 3.5em);
 			}
